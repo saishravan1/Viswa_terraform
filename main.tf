@@ -42,6 +42,9 @@ resource "aws_instance" "ec2_instance" {
   key_name               = var.key_name
   vpc_security_group_ids = ["${aws_security_group.ec2_security_group.id}"]
   user_data              = file("user_data.sh")
+  lifecycle {
+    prevent_destroy = true
+  }
 
   tags = {
     "name" = "instance-${var.instance_type_map["prod"]}"

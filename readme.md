@@ -1,9 +1,4 @@
-bastion sg: sg-03e6e15565cb49ea5
-
-
-apache: sg-09eb835ebda8b5e7f
-
-amazon.com
+http://54.198.218.232:8080/postreceive
 
 
 us-east-bastion.amazon.com
