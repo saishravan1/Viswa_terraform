@@ -42,4 +42,28 @@ Example
 ]
 
 
+JENKINS SERVER CONFIGURATION
 
+step1: jenkins installation
+step2:
+   $ vi /etc/passwd
+    jenkins >> /bin/bash
+
+step3: sudors.d >> jenkins users (admin)
+
+$ vi /etc/sudoers.d/90-cloud-init-users
+  # User rules for ec2-user
+  ec2-user ALL=(ALL) NOPASSWD:ALL
+  jenkins ALL=(ALL)  NOPASSWD:ALL
+
+step4: login into jenkins user
+  $ sudo su - jenkins
+
+
+Step5: $ssh-keygen
+
+step6: add the jenkins public key into your github account
+
+step7: $ssh -T git@github.com
+
+step8: jenkins support applications>> docker, terraform, ansible
